@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎒 Lost & Found - Quaid-E-Millath College</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🎒 Lost & Found - Quaid-E-Millath College</h1>
+    <nav>
+      <button id="btnLogin">🔑 Login</button>
+      <button id="btnLogout" style="display:none;">🚪 Logout</button>
+      <button id="btnReportLost">📕 Report Lost</button>
+      <button id="btnReportFound">📗 Report Found</button>
+      <input type="text" id="searchBox" placeholder="🔍 Search items...">
+    </nav>
+  </header>
+
+  <main>
+    <h2>📋 Reported Items</h2>
+    <div id="reportsContainer"></div>
+  </main>
+
+  <!-- Login/Register Modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <h3>🔑 Login / Register</h3>
+      <input id="authName" placeholder="👤 Full Name">
+      <input id="authPhone" placeholder="📞 Phone Number">
+      <input id="authPassword" type="password" placeholder="🔒 Password">
+      <button id="btnDoLogin">➡️ Continue</button>
+      <button id="btnCloseAuth">❌ Close</button>
+    </div>
+  </div>
+
+  <!-- Report Modal -->
+  <div id="reportModal" class="modal">
+    <div class="modal-content">
+      <h3 id="reportTitle">📝 New Report</h3>
+      <select id="reportType">
+        <option value="Lost">❌ Lost</option>
+        <option value="Found">✅ Found</option>
+      </select>
+      <input id="reportItem" placeholder="🎒 Item Name">
+      <input id="reportLocation" placeholder="📍 Location">
+      <textarea id="reportDesc" placeholder="🖊 Description"></textarea>
+      <input type="file" id="reportImg">
+      <button id="btnSubmitReport">📩 Submit</button>
+      <button id="btnCloseReport">❌ Close</button>
+    </div>
+  </div>
+</body>
+</html>
